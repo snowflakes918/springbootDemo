@@ -31,5 +31,6 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "permission_id")
     )
+    @JsonManagedReference
     private Set<Permission> permissions = new HashSet<>();
 }

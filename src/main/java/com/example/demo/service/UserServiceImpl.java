@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
         userDetail.setUser(savedUser);
 
         userDetailRepository.save(userDetail);
+        savedUser.setUserDetail(userDetail);
         return savedUser;
     }
 

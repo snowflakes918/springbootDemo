@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,5 +19,6 @@ public class Permission {
     private String name;
 
     @ManyToMany(mappedBy = "permissions")
+    @JsonBackReference
     private Set<User> users;
 }
